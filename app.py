@@ -34,9 +34,9 @@ def welcome():
     return(
     '''
     Welcome to the Climate Analysis API!
-    Available Routes:
-    /api/v1.0/precipitation
-    /api/v1.0/stations
-    /api/v1.0/tobs
+    Available Routes:\n
+    /api/v1.0/precipitation\n
+    /api/v1.0/stations\n
+    /api/v1.0/tobs\n
     /api/v1.0/temp/start/end
     ''')
