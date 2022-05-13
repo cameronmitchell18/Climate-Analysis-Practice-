@@ -49,4 +49,16 @@ def precipitation():
         filter(Measurement.date >= prev_year).all()
     precip = {date: prcp for date, prcp in precipitation}
     return jsonify(precip)
+
+@app.route('/api/v1.0/stations')
+
+def stations():
+
+    results = session.query(Station.station).all()
+
+    stations = list(np.ravel(results))
+
+# NOTE: to return our list as JSON, we need to add stations=stations. This formats our list into JSON.
+
+    return jsonify (Station = stations)
    
